@@ -1,4 +1,5 @@
 import "./globals.css";
+import Navbar from "./components/Navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
@@ -18,7 +19,12 @@ export default function RootLayout({ children }) {
           src="/js/script.js"
         ></script>
       </head>
-      <body>{children}</body>
+      <body>
+        <div className="lg:flex lg:flex-row h-screen">
+          <Navbar />
+          <div className="lg:w-full">{children}</div>
+        </div>
+      </body>
     </html>
   );
 }
