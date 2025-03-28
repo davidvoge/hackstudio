@@ -8,6 +8,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
+      <head>
+        <script
+          defer
+          data-website-id="67e6a3a22ac87103606b2ef1"
+          data-domain="www.hackstudio.co"
+          src="/js/script.js"
+        ></script>
+      </head>
       <body>{children}</body>
     </html>
   );
