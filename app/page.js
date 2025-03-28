@@ -12,7 +12,7 @@ export default function Home() {
               <input
                 type="email"
                 className="input"
-                placeholder="Ton puteain d'email de malade"
+                placeholder="Ton puteain dr'email de malade"
               />
               <p className="fieldset-label">On va te spammer !</p>
             </fieldset>
