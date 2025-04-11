@@ -1,7 +1,4 @@
-import FormContactWizard from "@/app/components/FormContactWizard";
-
+import ContactSection from "@/app/components/ContactSection";
 export default function ContactPage() {
-  return (
-    
-  );
+  return <ContactSection />;
 }
