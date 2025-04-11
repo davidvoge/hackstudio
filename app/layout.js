@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import TopMenu from "./components/TopMenu";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
@@ -10,8 +11,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <SpeedInsights />
       <head>
+        <SpeedInsights />
         <script
           defer
           data-website-id="67e6a3a22ac87103606b2ef1"
@@ -19,10 +20,16 @@ export default function RootLayout({ children }) {
           src="/js/script.js"
         ></script>
       </head>
-      <body>
-        <div className="lg:flex lg:flex-row h-screen">
-          <Navbar />
-          <div className="lg:w-full">{children}</div>
+      <body className="h-screen overflow-hidden">
+        <div className="lg:flex lg:flex-row h-full bg-neutral">
+          <div className="p-6 lg:sticky lg:top-0 lg:h-screen flex flex-col">
+            <Navbar />
+            <div className="flex-1" />
+          </div>
+          <div className="lg:w-5/6 flex flex-col gap-12 h-full overflow-y-auto">
+            <TopMenu />
+            <main className="flex-1">{children}</main>
+          </div>
         </div>
       </body>
     </html>
